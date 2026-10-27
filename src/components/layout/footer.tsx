@@ -38,14 +38,6 @@ export function Footer() {
             <ul className="space-y-1.5 text-xs">
               <li>
                 <Link
-                  href="/dashboard"
-                  className="hover:text-amber transition-colors"
-                >
-                  Inspector Study
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/team"
                   className="hover:text-amber transition-colors"
                 >

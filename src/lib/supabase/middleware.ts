@@ -59,7 +59,6 @@ export async function updateSession(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const isProtectedPath =
-    pathname.startsWith("/dashboard") ||
     pathname.startsWith("/team") ||
     pathname.startsWith("/quiz") ||
     pathname.startsWith("/leaderboard");
@@ -123,7 +122,7 @@ export async function updateSession(request: NextRequest) {
     )
   ) {
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    url.pathname = "/quiz";
     return redirectWithSession(url);
   }
 

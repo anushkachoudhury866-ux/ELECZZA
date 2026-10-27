@@ -75,9 +75,9 @@ export default function ErrorPage({
             <RefreshCw className="h-4 w-4 mr-1.5" />
             Re-evaluate Evidence (Retry)
           </BrassButton>
-          <Link href="/dashboard">
+          <Link href="/quiz">
             <Button variant="outline" size="default">
-              Return to Inspector Study
+              Active Case Files
             </Button>
           </Link>
           <Link href="/">

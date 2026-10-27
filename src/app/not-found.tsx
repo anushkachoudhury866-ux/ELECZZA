@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FogBackground } from "@/components/theme/fog-background";
 import { BrassButton } from "@/components/theme/brass-button";
 import { Button } from "@/components/ui/button";
-import { Search, FolderX, Compass, ArrowLeft } from "lucide-react";
+import { Search, FolderX, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -54,16 +54,10 @@ export default function NotFound() {
 
         {/* Action Buttons */}
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link href="/dashboard">
-            <BrassButton size="md" withLoupe>
-              Return to Inspector Study
-            </BrassButton>
-          </Link>
           <Link href="/quiz">
-            <Button variant="outline" size="default">
-              <Compass className="h-4 w-4 mr-1.5 text-amber" />
+            <BrassButton size="md" withLoupe>
               Active Case Files
-            </Button>
+            </BrassButton>
           </Link>
           <Link href="/">
             <Button variant="ghost" size="default">

@@ -94,9 +94,11 @@ export default function LoginPage() {
       const params = new URLSearchParams(window.location.search);
       const redirect = params.get("redirect");
       const destination =
-        redirect?.startsWith("/") && !redirect.startsWith("//")
+        redirect?.startsWith("/") &&
+        !redirect.startsWith("//") &&
+        redirect !== "/quiz"
           ? redirect
-          : "/dashboard";
+          : "/quiz";
       router.replace(destination);
     } catch (error) {
       const { code, message } = errorDetails(error);

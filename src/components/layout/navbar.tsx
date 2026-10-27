@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useUser } from "@/hooks/use-auth";
 import {
-  Shield,
   Users,
   HelpCircle,
   Trophy,
@@ -25,7 +24,6 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Study", href: "/dashboard", icon: Shield },
   { label: "Agency", href: "/team", icon: Users },
   { label: "Case Files", href: "/quiz", icon: HelpCircle },
   { label: "Ledger", href: "/leaderboard", icon: Trophy },
@@ -71,7 +69,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-fog bg-[linear-gradient(180deg,rgb(var(--surface-rgb)/0.97),rgb(var(--umber-rgb)/0.94))] shadow-[0_5px_18px_rgb(var(--umber-rgb)/0.35)] backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Brand Logo */}
-        <Link href="/dashboard" className="flex items-center gap-3 group">
+        <Link href="/quiz" className="flex items-center gap-3 group">
           <div className="wax-seal flex h-9 w-9 items-center justify-center rounded-full font-serif text-base font-bold text-parchment shadow-[0_0_12px_rgb(var(--wax-rgb)/0.3)] transition-transform group-hover:scale-105">
             §
           </div>

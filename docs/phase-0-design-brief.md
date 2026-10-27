@@ -94,7 +94,7 @@ uses the lighter `wax-foreground` token.
 
 ### Post-Login Experience
 
-3. **Detective Dashboard / Study (`/dashboard`)**:
+3. **Active Case Files & Investigation (`/quiz`)**:
    - Personal Dossier: Detective rank, solved percentage, accuracy rating, assigned Agency.
    - Notice Board: Active cases open for solving, upcoming tournament schedule.
    - Telegram Bulletin: Live announcements from organizers / Scotland Yard.
@@ -139,20 +139,20 @@ flowchart TD
     Root["/ (Landing Page)"] --> Login["/login (Auth & Domain Check)"]
     Root --> Rules["/rules (Code of Conduct)"]
 
-    Login --> Dashboard["/dashboard (Detective Study)"]
+    Login --> Quiz["/quiz (Detective Study)"]
 
-    Dashboard --> Team["/team (Agency HQ)"]
+    Quiz --> Team["/team (Agency HQ)"]
     Team --> TeamJoin["/team/join?code=XYZ"]
 
-    Dashboard --> Leaderboard["/leaderboard (Scotland Yard Ledger)"]
+    Quiz --> Leaderboard["/leaderboard (Scotland Yard Ledger)"]
 
-    Dashboard --> Lobby["/case/[id]/lobby (Case Briefing)"]
+    Quiz --> Lobby["/case/[id]/lobby (Case Briefing)"]
     Lobby --> Solve["/case/[id]/solve (Investigation Desk)"]
     Solve --> Solution["/case/[id]/solution (Case Retrospective)"]
 
-    Dashboard --> Profile["/profile (Inspector Dossier)"]
+    Quiz --> Profile["/profile (Inspector Dossier)"]
 
-    Dashboard -.-> Admin["/admin (Scotland Yard Dispatch - Admin Only)"]
+    Quiz -.-> Admin["/admin (Scotland Yard Dispatch - Admin Only)"]
     Admin --> AdminCases["/admin/cases"]
     Admin --> AdminLive["/admin/telemetry"]
 ```
@@ -164,7 +164,7 @@ flowchart TD
 | `/`                   | Public              | Landing Layout           | Read lore, view schedule, initiate sign-in     |
 | `/login`              | Public (Guest only) | Auth Centered Layout     | Google SSO / College email login               |
 | `/rules`              | Public              | Legal/Docs Layout        | Review scoring, rules, and penalties           |
-| `/dashboard`          | `@aot.edu.in` Auth  | Study Workspace Layout   | View active cases, agency badge, notices       |
+| `/quiz`               | `@aot.edu.in` Auth  | Study Workspace Layout   | View active cases, agency badge, notices       |
 | `/team`               | `@aot.edu.in` Auth  | Study Workspace Layout   | Create agency, invite partners, switch roles   |
 | `/leaderboard`        | `@aot.edu.in` Auth  | Study Workspace Layout   | Filter scores, inspect rankings, search teams  |
 | `/case/[id]/lobby`    | Team Member Auth    | Immersive Focused Layout | Case briefing, audio ambient toggle, ready-up  |

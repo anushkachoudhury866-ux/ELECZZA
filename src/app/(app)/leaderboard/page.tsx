@@ -12,7 +12,7 @@ interface RankingEntry {
 const mockRankings: RankingEntry[] = [
   {
     rank: 1,
-    agencyName: "The Baker Street Irregulars",
+    agencyName: "221B Investigation Syndicate",
     leadInspector: "S. Holmes (ECE)",
     score: 2850,
     solvedCount: 10,

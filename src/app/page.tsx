@@ -4,7 +4,7 @@ import { FogBackground } from "@/components/theme/fog-background";
 import { AtmosphereEffects } from "@/components/theme/atmosphere-effects";
 import { BrassButton } from "@/components/theme/brass-button";
 import { Footer } from "@/components/layout/footer";
-import { ArrowRight, Compass, Shield, Award } from "lucide-react";
+import { Compass, Shield, Award } from "lucide-react";
 
 export default function Home() {
   const domain = process.env.NEXT_PUBLIC_ALLOWED_EMAIL_DOMAIN || "@aot.edu.in";
@@ -75,18 +75,11 @@ export default function Home() {
             strictly required.
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-8 flex justify-center">
             <Link href="/login">
               <BrassButton size="lg" withLoupe>
                 Enter 221B Baker St
               </BrassButton>
-            </Link>
-            <Link
-              href="/dashboard"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-fog bg-surface px-6 text-xs font-semibold uppercase tracking-wider text-parchment transition-colors hover:border-amber/50"
-            >
-              Inspector Study Demo
-              <ArrowRight className="h-3.5 w-3.5 text-amber" />
             </Link>
           </div>
 
